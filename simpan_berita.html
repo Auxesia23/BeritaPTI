@@ -1,12 +1,11 @@
-<head>
+<head> 
     <title>Simpan Berita</title>
 </head>
 <center>
 
 <body>
 
-
-<?php
+<?php 
 include "db.php";
 if($_POST['simpan']){
     $judul_id = $_POST['judul_berita_indonesia'];
@@ -27,8 +26,7 @@ if($_POST['simpan']){
             move_uploaded_file($file_tmp, 'berkas/'.$nama);
 
             $hasil= mysqli_query($mysqli,
-                "INSERT INTO berita VALUES (NULL,NOW(),'$judul_id','$judul_en','$is
-i_id','$isi_en','$nama','T')");
+                "INSERT INTO berita VALUES (NULL,NOW(),'$judul_id','$judul_en','$isi_id','$isi_en','$nama','T')");
             if($hasil){
                 echo 'Proses Upload File : Berhasil';
                 echo '<a href="index.php">Kembali Ke Halaman Berita</a>';
