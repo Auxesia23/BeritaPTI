@@ -35,16 +35,16 @@ if($_POST['simpan']){
                 echo 'Proses Upload File : Gagal';
                 echo '<a href="index.php">Kembali Ke Halaman Berita</a>';
                 echo '<a href="tambah_berita.html.php">Kembali Ke Form Tambah Berita</a>';
-                }
             }
-                else{
-                    echo 'Ukuran File Terlalu Besar';
-                
-                }
-            }
-            else{
-                echo 'File yang dikirim terindikasi BERBAHAYA';
         }
+        else{
+            echo 'Ukuran File Terlalu Besar';
+                
+        }
+    }
+    else{
+        echo 'File yang dikirim terindikasi BERBAHAYA';
+    }
 }
 
 ?>
