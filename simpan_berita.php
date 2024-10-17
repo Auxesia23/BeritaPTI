@@ -6,13 +6,13 @@
 <body>
 
 <?php 
-include "db.php";
+include "dbconfig.php";
 if($_POST['simpan']){
     $judul_id = $_POST['judul_berita_indonesia'];
     $judul_en = $_POST['judul_berita_inggris'];
     $isi_id = $_POST['isi_berita_indonesia'];
     $isi_en =$_POST['isi_berita_inggris'];
-    $ekstensi_diperbolehkan = array('png','jpg','pdf','zip');
+    $ekstensi_diperbolehkan = array('png','jpg','pdf','zip','sql');
     $nama = $_FILES['file']['name'];
     $x = explode('.', $nama);
     $ekstensi = strtolower(end($x));
