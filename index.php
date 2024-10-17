@@ -2,6 +2,7 @@
 // Mulai session   
 session_start();   
 $default_lang = 'bahasa_indonesia';   
+$username = $_SESSION['username'];
    
 if(!$_SESSION['lang']) {   
   $_SESSION['lang'] = $default_lang;   
@@ -28,17 +29,17 @@ if(!$_SESSION['lang']) {
          <li><a href="#"><?php echo $lang_menu_home; ?></a></li>   
          <li><a href="#"><?php echo $lang_menu_profile; ?></a></li>   
          <li><a href="#"><?php echo $lang_menu_contact; ?></a></li>   
-         <li><a href="tambah_berita.html"><?php echo $lang_menu_add; ?></a></li>   
+         <li><a href="tambah_berita.php"><?php echo $lang_menu_add; ?>Tambah berita</a></li>   
        </ul>   
      </nav>   
      <p>   
-       <?php echo "$lang_selamat_datang" ?>   
+       <?php echo "$lang_selamat_datang ", $username ?>   
      </p>   
      <table border=1>   
     
 <?php   
     
-     include "db.php";   
+     include "dbconfig.php";   
     
     
     
