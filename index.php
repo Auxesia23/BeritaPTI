@@ -69,8 +69,7 @@ if(!$_SESSION['lang']) {
     
        do   
           {   
-           list ($id_berita, $waktu_berita, $judul_id, $judul_en, $isi_id,$isi_en,$n
-      ama_file,$dihapus)=$row;   
+           list ($id_berita, $waktu_berita, $judul_id, $judul_en, $isi_id,$isi_en,$nama_file,$dihapus)=$row;   
                if ($_SESSION['lang'] == "bahasa_inggris"){   
                echo "<tr><td>$id_berita</td>   
                          <td>$waktu_berita</td>   
